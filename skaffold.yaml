@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: leap-boris-playground/boilerplate-cloud-functions
+  - image: leap-0123/boilerplate-cloud-functions
     context: .
     docker: {}
   tagPolicy:
