@@ -7,7 +7,7 @@ def example():
     return "Example flask app"
 
 @app.route('/healthz')
-def example():
+def health_check():
     return "OK"
 
 if __name__ == '__main__':
