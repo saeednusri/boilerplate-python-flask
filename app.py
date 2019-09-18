@@ -1,10 +1,11 @@
 import os
 from flask import Flask
 app = Flask(__name__)
+app.debug = True
 
 @app.route('/')
 def example():
-    return "Example flask app"
+    return "Example Flask App"
 
 @app.route('/healthz')
 def health_check():
