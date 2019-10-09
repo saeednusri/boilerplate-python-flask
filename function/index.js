@@ -1,7 +1,7 @@
 const request = require('request-promise');
 
 exports.runner = (req, res) => {
-    const receivingServiceURL = 'https://boilerplate-cloud-functions-57e3askhva-uc.a.run.app';
+    const receivingServiceURL = process.env.API_URI;
     const metadataServerTokenURL = 'http://metadata/computeMetadata/v1/instance/service-accounts/default/identity?audience=';
     const tokenRequestOptions = {
         uri: metadataServerTokenURL + receivingServiceURL,
@@ -12,7 +12,11 @@ exports.runner = (req, res) => {
 
     request(tokenRequestOptions)
     .then((token) => {
-        return request(receivingServiceURL).auth(null, null, true, token)
+        return request({
+            method: 'POST',
+            uri: receivingServiceURL,
+            body: req.body
+        }).auth(null, null, true, token)
     })
     .then((response) => {
         res.status(200).send(response);
