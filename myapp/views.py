@@ -1,5 +1,5 @@
 from myapp import app
-import myapp.package.package_functions as test
+import myapp.package.functions as functions
 
 @app.route('/execute', methods = ['POST'])
 def execute():
@@ -17,4 +17,4 @@ def health_check():
 
 @app.route('/package_1')
 def packagetest():
-    return test.package_1_test()
+    return functions.package_1_test()
