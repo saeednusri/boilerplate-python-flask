@@ -2,4 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-import app.views
+#Change my_app to app name
+
+import my_app.views
