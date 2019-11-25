@@ -1,5 +1,5 @@
-from my_app import app
-import my_app.package_1 as test
+from myapp import app
+import myapp.package_1.package_1_functions as test
 
 @app.route('/')
 def example():

@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 #Change my_app to app name
 
-import my_app.views
+import myapp.views
