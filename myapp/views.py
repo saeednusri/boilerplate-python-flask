@@ -4,7 +4,6 @@ import myapp.package.functions as functions
 @app.route('/execute', methods = ['POST'])
 def execute():
     # Add code here
-
     return "Success"
 
 @app.route('/')
@@ -17,4 +16,4 @@ def health_check():
 
 @app.route('/package_1')
 def packagetest():
-    return functions.package_1_test()
+    return str(functions.add(1,1))
