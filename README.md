@@ -1,4 +1,8 @@
 # python-http
 
+Simple Hello World Python Flask template
 
-Simple Hello World Python HTTP server
+To run app:
+ ``` $pip install -r requirements.txt```
+
+ ``` $python run.py ```
